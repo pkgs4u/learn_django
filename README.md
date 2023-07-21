@@ -5,7 +5,6 @@
 
 
 ## Table Of Contents
-
 - [Table Of Contents](#Table Of Contents)
 - [About The Project](#About The Project)
 - [Setup Project](#Setup Project)
