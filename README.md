@@ -1,13 +1,14 @@
 
 
 <p align="center">
-<h3 align="center">django</h3>
+<h1 align="center">django</h1>
 
 
 ## Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
-- [About The Project](#about-the-project)
+- [About The Project](#About the project)
+- [Setup Project](#Setup Project)
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -25,4 +26,23 @@
 
 ## Setup Project
 
-<p>Clone the project with the url "https://github.com/pkgs4u/learn_django.git"</p>
+<p>Clone the project with the url "https://github.com/pkgs4u/learn_django.git".</p>
+
+### Virtual Environment
+<p>Configure virtual environment if not.</p>
+
+```bash
+$ python -m venv venv
+$ venv\Scripts\activate.bat
+```
+
+### Install Django
+
+```bash
+$ pip install django
+```
+
+
+
+
+
