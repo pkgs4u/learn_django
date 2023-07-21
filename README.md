@@ -6,8 +6,8 @@
 
 ## Table Of Contents
 
-- [Table Of Contents](#table-of-contents)
-- [About The Project](#About the project)
+- [Table Of Contents](#Table Of Contents)
+- [About The Project](#About The Project)
 - [Setup Project](#Setup Project)
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
