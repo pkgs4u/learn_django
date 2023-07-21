@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+<h2>Products</h2>
+{% extends 'theme.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+{% for product in products %}
+<div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+      <img src="{{product.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">${{product.price}}</p>
+<!--        <a href="#" class="btn btn-primary">Go somewhere</a>-->
+      </div>
+    </div>
+</div>
+
+{% endfor %}
+    </div>
+</div>
+</body>
+{% endblock%}
+
+</html>

@@ -45,7 +45,7 @@ $ pip install django
 
 ### Create and run Migrations:
 
-1) Add apps details under Installed_Apps in settings.py. Example 'products.apps.ProductsConfig'. ProductConfig is available inside apps.py under your app folder (Eg: Products folder).
+1) Add apps details under **_Installed_Apps_** in settings.py. Example 'products.apps.ProductsConfig'. ProductConfig is available inside apps.py under your app folder (Eg: Products folder).
 2) Make sure you stop the server while you run migrations. Run this to generate migration file.
 ```shell
 $ python manage.py makemigrations
@@ -57,5 +57,9 @@ $ python manage.py migrate
 ``` 
 
 
+### Create SuperUser
 
+```bash
+$ python manage.py createsuperuser
+```
 
