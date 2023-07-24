@@ -29,7 +29,7 @@
 ## Prerequisites
 
 ### Virtual Environment
-<p>Configure virtual environment if not.</p>
+<p>Configure virtual environment if not...</p>
 
 ```bash
 $ python -m venv venv
