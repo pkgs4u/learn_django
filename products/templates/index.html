@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Products</title>
-</head>
-<body>
-<h2>Products</h2>
-{% extends 'theme.html' %}
-{% block content %}
-<div class="container">
-    <div class="row">
-{% for product in products %}
-<div class="col-md-3">
-    <div class="card" style="width: 18rem;">
-      <img src="{{product.image}}" class="card-img-top" alt="{{product.name}}" width="200" height="200">
-      <div class="card-body">
-        <h5 class="card-title">{{product.name}}</h5>
-        <p class="card-text">₹{{product.price}}</p>
+  </head>
+  <body>
+    <h2>Products</h2> {% extends 'theme.html' %} {% block content %} <div class="container">
+      <div class="row"> {% for product in products %} <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src="{{product.image}}" class="card-img-top" alt="{{product.name}}" width="200" height="200">
+            <div class="card-body">
+              <h5 class="card-title">{{product.name}}</h5>
+              <p class="card-text">₹{{product.price}}</p>
+              <form action="/#{{product.id}}" class="col-2 " method="POST"> {% csrf_token %} <span class="a-dropdown-container">
+                  <label for="quantity" class="a-native-dropdown">Quantity:</label>
+                  {% csrf_token %}
+                  <select name="quantity" autocomplete="off" id="quantity" tabindex="0" data-action="a-dropdown-select" class="a-native-dropdown a-declarative">
+                    <option value="1" selected="">1 </option>
+                    <option value="2">2 </option>
+                    <option value="3">3 </option>
+                    <option value="4">4 </option>
+                    <option value="5">5 </option>
+                    <option value="6">6 </option>
+                  </select>
+                  <span tabindex="-1" class="a-button a-button-dropdown a-button-small" aria-hidden="true" id="a-autoid-6" style="min-width: 0%;"></span>
+                  </span>
+              </form>
+                <form>
+                     <input hidden type="text" name='product' value='{{product.id}}'>
+                     <input id= "add_cart" type="submit" class="float-right btn btn-success form-control" value="Add To Cart" onclick={{ add_cart }}>
+              </form>
+                      {% if messages %}
+                      {% for result in messages %}
+                      <b style="color:green">{{ result }}</b>
+                      {% endfor %}
+                      {% endif %}
 
-         <span class="a-dropdown-container">
-             <label for="quantity" class="a-native-dropdown">Quantity:</label>
-             <select name="quantity" autocomplete="off" id="quantity" tabindex="0" data-action="a-dropdown-select" class="a-native-dropdown a-declarative">
-                 <option value="1" selected="">1 </option>
-                 <option value="2">2 </option>
-                 <option value="3">3 </option>
-                 <option value="4">4 </option>
-                 <option value="5">5 </option>
-                 <option value="6">6 </option>
-             </select><span tabindex="-1" class="a-button a-button-dropdown a-button-small" aria-hidden="true" id="a-autoid-6" style="min-width: 0%;">
-{#             <span class="a-button-inner"><span class="a-button-text a-declarative" data-csa-c-func-deps="aui-da-a-dropdown-button" data-csa-c-type="widget" data-csa-interaction-events="click" data-action="a-dropdown-button" aria-hidden="true" data-csa-c-id="ne16ct-q8om8-7ogw4a-9n0xh5" id="a-autoid-6-announce"><span class="a-dropdown-label">Quantity:</span><span class="a-dropdown-prompt">1 </span></span><i class="a-icon a-icon-dropdown"></i>#}
-         </span></span>
-
-
-      </div>
-          <button type="button" class="btn btn-success" >Add to Cart</button>
+            </div>
+{#              <button type="button" class="btn btn-success" >Add to Cart</button>#}
+          </div>
+        </div> {% endfor %} </div>
     </div>
-</div>
-
-{% endfor %}
-    </div>
-</div>
-
-</body>
-{% endblock%}
-
+  </body> {% endblock%}
 </html>
